@@ -1,0 +1,3407 @@
+/* -----------------------------------*/
+/* ---------->>> GLOBAL <<<-----------*/
+/* -----------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  background-color: #626e75;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* -----------------------------------*/
+/* ---------->>> INDEX, HEADER, AND NAVIGATION BAR <<<-----------*/
+/* -----------------------------------*/
+
+/* Navbar */
+nav {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent !important;
+  padding: 1em;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.statitics span {
+  color: white;
+  position: relative;
+  top: 5px;
+  right: 5px;
+
+}
+
+.statitics h1 {
+  color: white;
+  text-align: center;
+}
+
+.statitics ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  margin-bottom: 80px;
+}
+
+.statitics ul li {
+  align-content: space-around;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+
+}
+
+.statitics ul li hr {
+  box-sizing: border-box;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  width: 50%;
+}
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 5px solid #ccc;
+  margin: 20px auto;
+}
+
+/*Logo*/
+.logo {
+  width: 50px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+label {
+  display: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+nav ul a {
+  padding: 0.5em;
+  transition: color 0.5s ease;
+  font-weight: bold;
+}
+
+nav ul a:hover {
+  color: darkorange;
+}
+
+.active {
+  opacity: 0.5;
+  color: #fff !important;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url("images/Banner.jpeg");
+  background-position: 50% 0%;
+  height: 550px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*Analysis table*/
+section h1 {
+  font-size: 3em;
+}
+
+section {
+  font-size: large;
+  text-align: center;
+  color: black;
+}
+
+#countdown1,
+#countdown2,
+#countdown3,
+#countdown4 {
+  animation: counter-hover 0.5s alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 5rem system-ui;
+  padding: 1rem;
+}
+
+
+#countdown1::before,
+#countdown2::before,
+#countdown3::before,
+#countdown4::before {
+  content: counter(num);
+}
+
+#countdown1 {
+  --num: 52;
+}
+
+#countdown2 {
+  --num: 120;
+}
+
+#countdown3 {
+  --num: 8256;
+}
+
+#countdown4 {
+  --num: 100;
+}
+
+
+
+@keyframes counter-hover {
+  from {
+    --num: 0;
+  }
+
+  to {
+    --num: 9000;
+  }
+}
+
+/* Change color icon */
+.material-symbols-outlined {
+  color: black;
+}
+
+/* content - why choose us */
+/* Base Styles */
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+span,
+a {
+  display: inline-block;
+  color: inherit;
+}
+
+/* Section Styles */
+.section-head {
+  margin-bottom: 60px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background-color: white;
+  border: 5px solid gainsboro;
+  text-align: center;
+}
+
+.section-head h2 {
+  position: relative;
+  line-height: 2;
+  letter-spacing: 0.5px;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-head h2::before {
+  content: '';
+  width: 100px;
+  height: 5px;
+  background: #cbd4da;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-head p {
+  margin-bottom: 20px;
+}
+
+
+/* Feature Styles */
+#big_box {
+  margin: 30px;
+  padding: 20px;
+  border: 5px solid gray;
+  border-radius: 20px;
+}
+
+#big_box_text {
+  text-align: center;
+  font-size: 17px;
+}
+
+.item {
+  background: white;
+  text-align: center;
+  padding: 30px 25px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  border: 5px solid gainsboro;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+}
+
+.item:hover {
+  background: #c7cfd1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.item .icon {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #000000;
+  width: 90px;
+  height: 90px;
+  line-height: 96px;
+  border-radius: 50%;
+}
+
+/* Color variations - streamlined */
+.feature_box_col_one {
+  background: rgba(25, 15, 80, 0.2);
+}
+
+.feature_box_col_two {
+  background: rgba(25, 15, 80, 0.2);
+}
+
+.feature_box_col_three {
+  background: rgba(25, 15, 80, 0.2);
+}
+
+.feature_box_col_four {
+  background: rgba(25, 15, 80, 0.2);
+}
+
+.feature_box_col_five {
+  background: rgba(25, 15, 80, 0.2);
+}
+
+.feature_box_col_six {
+  background: rgba(25, 15, 80, 0.2);
+}
+
+
+/* Remaining Styles */
+.item p {
+  font-size: 15px;
+  line-height: 26px;
+}
+
+
+
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
+/* ---------->>> ABOUT US <<<-----------*/
+/* -----------------------------------*/
+
+.about-section {
+  background: url("images/about-us.png") no-repeat left;
+  background-size: 80%;
+  overflow: hidden;
+  margin: 30px;
+  border-radius: 3em;
+  background-clip: padding-box;
+  width: 95%;
+}
+
+.inner-container {
+  width: 45%;
+  float: right;
+  background-color: #75828a;
+  padding: 40px;
+  position: relative;
+  bottom: 0px;
+
+}
+
+.inner-container h1 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 900;
+  color: #f1f1f1;
+}
+
+.text {
+  font-size: 14px;
+  color: #f1f1f1;
+  line-height: 30px;
+  /*SHOULD WE CHANGE TO LEFT?*/
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.about-section .inner-container .course-info h2 {
+  margin-top: 10px;
+  text-align: left;
+  clear: both;
+  color: white;
+}
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  padding: 10px;
+}
+
+dt {
+  float: left;
+  width: 50%;
+  text-align: left;
+  font-weight: bold;
+}
+
+dd {
+  float: left;
+  width: 50%;
+  text-align: right;
+}
+
+.profile img {
+  border: 1px solid #ddd;
+  width: 300px;
+  height: 200px;
+  float: center;
+}
+
+.profile {
+  padding-top: 20px;
+}
+
+.table-style h2{
+  text-align: center;
+  font-size: 200%;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 15px;
+}
+table .table-align-center
+{
+  text-align: center;
+}
+table,th,td
+{
+  border: 4px solid #a5a7a7;
+}
+th {
+  background-color: #706262;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+td {
+  background-color: #797272;
+  padding: 10px;
+  text-align: left;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.team-container {
+  text-align: center;
+  background: #626e75;
+}
+
+.team-header {
+  padding-top: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin: auto;
+  line-height: 50px;
+}
+
+.sub-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teams {
+  margin: 10px;
+  padding: 22px;
+  max-width: 30%;
+  cursor: pointer;
+  transition: 0.9s;
+  box-sizing: border-box;
+  line-break: auto;
+  border-radius: 1em;
+  background-color: #8b8b8b;
+}
+
+.teams:hover .name,
+.teams:hover .position,
+.teams:hover .profile-socials {
+
+  color: #000;
+}
+
+.teams:hover {
+  background: #faf8f8;
+  border-radius: 12px;
+}
+
+.teams img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.name {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.position {
+  font-style: italic;
+  color: white;
+}
+
+.profile-socials {
+  margin: 14px;
+  color: white;
+}
+
+.profile-socials a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: 0.4s;
+}
+
+.profile-socials a:hover {
+  transform: scale(1.5);
+}
+
+.profile-socials a i {
+  color: #444;
+}
+
+
+
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
+/* ---------->>>ENHANCEMENTS<<<-----------*/
+/* -----------------------------------*/
+.enhancements {
+  font-family: "Rubik", sans-serif;
+  max-width: 900px;
+  word-wrap: break-word;
+  margin: 20px auto;
+  box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
+  padding: 25px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 400ms ease;
+  background-color: rgb(230, 230, 230);
+}
+
+.enhancements h2 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.enhancements-list li:hover {
+  transform: scale(1.03);
+}
+
+.enhancements-list {
+  position: relative;
+  left: 20px;
+  margin-bottom: 40px;
+
+}
+
+.enhancements-list li {
+  box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
+  margin-bottom: 50px;
+  width: 94%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  list-style-type: none;
+  transition: all 400ms ease;
+}
+
+.enhancements-list li p {
+  padding: 15px 0 15px 0;
+  width: 95%;
+
+}
+
+#first-enhancement-pic {
+  width: 100%;
+}
+
+#second-enhancement-pic {
+  width: 100%;
+}
+
+#third-enhancement-pic {
+  width: 100%;
+}
+
+#fourth-enhancement-pic {
+  width: 100%;
+}
+
+#fifth-enhancement-pic {
+  width: 100%;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
+/* ---------->>>JOBS DECSCRIPTIONS<<<-----------*/
+/* -----------------------------------*/
+.jobs-list-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: "Rubik", sans-serif;
+  word-wrap: break-word;
+}
+
+.jobs-list-container h2 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  border-left: 4px solid #0a0e0f;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+/*grid view, gap and shadow for the job containers*/
+.jobs-list-container .jobs-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.jobs-list-container .jobs-container img {
+  width: 60px;
+  position: relative;
+  left: 30px;
+}
+
+.jobs-list-container .job {
+  box-shadow: 0 4px 24px -7px rgba(2, 48, 71, 0.5);
+  padding: 25px;
+  margin: 15px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 400ms ease;
+  background-color: rgb(230, 230, 230);
+}
+
+.jobs-list-container .job:hover {
+  transform: scale(1.03);
+}
+
+.jobs-list-container .jobs-container .job .open-postion {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  color: black;
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+}
+
+.jobs-list-container .jobs-container .job-title {
+  font-size: 30px;
+  position: relative;
+  left: 30px;
+  padding: 0px 0;
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
+
+.jobs-list-container .jobs-container .details h4 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 0;
+  color: black;
+}
+
+.jobs-list-container .jobs-container .details {
+  margin-top: 6px;
+  color: black;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.jobs-list-container .details ul {
+  font-size: 14px;
+  position: relative;
+  left: 40px;
+  margin-bottom: 10px;
+}
+
+.jobs-list-container .details ul .bolding-first-line {
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.jobs-list-container .details ul .bolding {
+  font-weight: bold;
+}
+
+.jobs-list-container .details ol {
+  font-size: 14px;
+  position: relative;
+  left: 40px;
+  margin-bottom: 10px;
+}
+
+.jobs-list-container .details ol .bolding-first-line {
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.jobs-list-container .details ol .bolding {
+  font-weight: bold;
+}
+
+.jobs-list-container .jobs-container .job .Apply-btn {
+  text-decoration: none;
+  background-color: white;
+  width: 95%;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: black;
+  flex: 1;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 400ms ease;
+  border: 2px solid black;
+}
+
+.jobs-list-container .jobs-container .job .aside {
+  font-size: 12px;
+  width: 25%;
+  float: right;
+  padding-left: 5px;
+  border: 1px solid black;
+  border-radius: 0.8em;
+}
+
+.jobs-list-container .jobs-container .job .Apply-btn {
+  margin-top: 20px;
+}
+
+.jobs-list-container .jobs-container .job .Apply-btn:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+/* -----------------------------------*/
+/* ---------->>>JOBS APPLYING<<<-----------*/
+/* -----------------------------------*/
+
+/*Personal Information */
+/*style header and font for web*/
+.job-applying-container {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(247, 245, 245);
+  border-radius: 0.9em; 
+}
+
+#applyh1 {
+  font-family: "Rubik", sans-serif;
+  padding: 10px;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 250px;
+}
+
+
+/*Style header and input for fomrs*/
+.applying-basic-info h2 {
+  text-align: left;
+  font-size: 20px;
+}
+
+.applying-basic-info label {
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  display: block;
+  float: left;
+  font-size: 17px;
+  cursor: default;
+}
+
+.applying-basic-info label::before {
+  content: "* ";
+  color: red;
+}
+
+.applying-basic-info input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  height: 35px;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  text-indent: 0.3em;
+}
+
+hr {
+  width: 100%;
+  height: 0.1px;
+  background-color: #bdbbbb;
+  border: none;
+  margin-top: 2px;
+}
+
+#asterisk {
+  text-align: left;
+  font-size: 12px;
+}
+
+#asterisk::before {
+  content: "* ";
+  color: #ff0000;
+}
+
+/*First Name and Last Name division */
+.name-container {
+  display: flex;
+}
+
+.name-container div {
+  display: block;
+  flex-direction: column;
+  columns: 600px;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.name-container #last_name1 {
+  margin-left: 0px;
+}
+
+.name-container label {
+  margin-bottom: 5px;
+}
+
+#last_name_align {
+  margin-right: 0px;
+}
+
+.name-container input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* DOB Edit */
+input[type="date"] {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+}
+
+/* Gender Chosen Customzie */
+fieldset {
+  display: block;
+  text-align: left;
+  margin-top: 20px;
+  border: 2px groove black;
+  width: 11em;
+  font-size: 20px;
+  border-radius: 0.3em;
+}
+
+.gender legend::before {
+  content: "* ";
+  color: red;
+}
+
+.gender .container::before {
+  content: none;
+}
+
+.gender .container {
+  position: relative;
+  padding-left: 45px;
+  padding-top: 2px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.gender .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.gender .checkmark {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 28px;
+  width: 28px;
+  border-radius: 0.3em;
+  background-color: #8b9199;
+  transition: background-color 0.3s;
+}
+
+#blank {
+  height: 5px;
+  margin-bottom: 0;
+  visibility: hidden;
+}
+
+/* State customize */
+#statecuztomize {
+  position: relative;
+  margin-top: 21px;
+}
+
+select {
+  position: relative;
+  float: right;
+  margin-top: 0px;
+  top: 15px;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  text-indent: 0.6em;
+  border-radius: 0.5em;
+}
+
+/*Skill lists*/
+.skill_list h2::before {
+  content: "* ";
+  color: red;
+}
+
+.skill_list h2 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.skill_list label::before {
+  content: none;
+}
+
+.skill_list .container {
+
+  position: relative;
+  margin-bottom: 0.5em;
+
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  text-align: left;
+}
+
+
+.skill_list .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.skill_list .checkmark {
+  position: relative;
+  float: right;
+  top: 0;
+  height: 28px;
+  margin-left: 20px;
+  width: 28px;
+  border-radius: 0.3em;
+  background-color: #8b9199;
+  transition: background-color 0.3s;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+}
+
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+.container .checkmark.checked::after {
+  content: "\2713";
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .checkmark::after {
+  content: "\2713";
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input:checked+.checkmark {
+  background-color: #000000;
+}
+
+.job-applying-container textarea::placeholder {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.job-applying-container textarea {
+  margin-top: 20px;
+  border-radius: 1em;
+  padding: 5px;
+  text-indent: 9px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+/*Style apply button*/
+#apply {
+  position: relative;
+  font-size: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 40px;
+  background-color: white;
+}
+
+#apply:hover {
+  background-color: #000000;
+  color: white;
+}
+
+
+
+/* -----------------------------------*/
+/* ---------->>>PROCESS EOI<<<-----------*/
+/* -----------------------------------*/
+.successful{
+  max-width: 600px;
+  margin: 20px auto 10px;
+  padding: 20px;
+  background-color: #20e006;
+  border: 1px solid #f5c6cb;
+  border-radius: 10px;
+}
+.successful p {
+  border: 1px solid #00ff2a;
+  max-width: 600px;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+.error-container {
+  max-width: 600px;
+  margin: 20px auto 10px;
+  padding: 20px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 10px;
+}
+
+.error-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.error-container p {
+  border: 1px solid #ff0019;
+  max-width: 600px;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.error-container a {
+  display: block;
+  margin-top: 20px;
+  color: #721c24;
+  text-decoration: underline;
+}
+
+/* -----------------------------------*/
+/* ---------->>>PROCESS EOI<<<-----------*/
+/* -----------------------------------*/
+
+
+/* -----------------------------------*/
+/* ---------->>>HR MANAGING SITE<<<-----------*/
+/* -----------------------------------*/
+
+/* A simple style sheet to improve user interface */
+.HR_style body {
+  font-family: Arial, sans-serif;
+}
+
+#HR {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.HR_style {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.HR_style label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.HR_style input[type="text"] {
+  width: calc(100% - 20px);
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.HR_style select {
+  width: calc(100% - 10px);
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} 
+
+.HR_style select option {
+  font-size: 16px;
+  text-align: center;
+}
+
+.HR_style input[type="submit"] {
+  font-size: 10px;
+  margin-top: 20px;
+  width: 100%;
+  height: 38px;
+  font-size: 1.2em;
+  background-color: gray;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.HR_style input[type="submit"]:hover {
+  background-color: #40bdb5;
+}
+
+.HR_style .delete-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.HR_style .delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Success and Error Messages */
+.ok {
+  color: green;
+}
+
+.notok {
+  color: red;
+}
+
+.wrong {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .HR_style {
+    padding: 20px;
+  }
+
+  .HR_style input[type="text"],
+  .HR_style select {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------------------------------------------- */
+/* -----------------------------------*/
+/* ---------->>> FOOTER <<<-----------*/
+/* -----------------------------------*/
+
+footer {
+  width: 100%;
+  background: linear-gradient(to left, #262f33, #8c948f);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+  position: absolute;
+  bottom: unset;
+  z-index: 0;
+}
+
+/*footer row*/
+.row {
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/*footer-column*/
+.col {
+  flex-basis: 25%;
+  padding: 10px
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+  flex-basis: 15%;
+}
+
+/*footer-headers*/
+.col h3 {
+  width: fit-content;
+  margin-bottom: 25px;
+  position: relative
+}
+
+.col h4 {
+  margin-bottom: 10px;
+  /* spacing each mail contact */
+}
+
+/*footer-email*/
+#email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0px 10px 0px;
+}
+
+/*footer-nav*/
+.col ul {
+  display: block;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*footer-news*/
+#footer-form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+
+#footer-form .fa-envelope {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#footer-form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+#footer-form input::placeholder {
+  color: rgb(240, 240, 240);
+}
+
+#footer-form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+#footer-form button .fa-newspaper {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+
+
+.copyright {
+  text-align: center;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*form animations*/
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> REGISTER <<<-----------*/
+/* -----------------------------------*/
+.register-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.register-container h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2em; 
+  color: #40bdb5; 
+}
+
+.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+}
+
+.box:focus {
+  outline: none;
+}
+
+.register-container .form-group label[for="image"] {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.register-container .form-group input[type="file"] {
+  display: block;
+  background-color: #fff;
+  padding: 5px;
+  color: #444;
+  font-size: 1em; 
+  width: 100%;
+}
+
+
+.register-container .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  background-color: #737373;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-container .btn:hover {
+  background-color: #40bdb5; 
+}
+
+.register-container .box:hover,
+.register-container:hover,
+.register-container #input_image:hover {
+  transform: scale(1.03);
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+  .register-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> LOGIN <<<-----------*/
+/* -----------------------------------*/
+.register-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.register-container h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2em; 
+  color: #40bdb5; 
+}
+
+.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+}
+
+.box:focus {
+  outline: none;
+}
+
+.register-container .form-group label[for="image"] {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.register-container .form-group input[type="file"] {
+  display: block;
+  background-color: #fff;
+  padding: 5px;
+  color: #444;
+  font-size: 1em; 
+  width: 100%;
+}
+
+
+.register-container .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  background-color: #737373;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-container .btn:hover {
+  background-color: #40bdb5; 
+}
+
+.register-container .box:hover,
+.register-container:hover,
+.register-container #input_image:hover {
+  transform: scale(1.03);
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+  .register-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> LOGIN <<<-----------*/
+/* -----------------------------------*/
+
+.login-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; 
+}
+
+.login-container h2 {
+  margin-top: 0;
+  font-size: 2em; 
+  color: #40bdb5; 
+}
+
+.login-container .error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.login-container .success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container .box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em; 
+}
+
+.login-container .box:focus {
+  outline: none;
+  box-shadow: 0 0 10px #40bdb5; 
+}
+
+.login-container .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #808080;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em; 
+}
+
+.login-container .btn:hover {
+  background-color: #40bdb5; 
+}
+
+.login-container .box:hover,
+.login-container:hover {
+  transform: scale(1.03);
+}
+
+.login-container p{
+  text-align: center;
+  margin-top: 10px;
+}
+
+#link_to_register:hover {
+  text-decoration: underline;
+  color: #40bdb5; 
+}
+
+/* Responsive Styles for login page */
+@media only screen and (max-width: 600px) {
+  .login-container{
+      max-width: 100%;
+      padding: 10px;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> DASHBOARD <<<-----------*/
+/* -----------------------------------*/
+/* Set up the main container */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Style the profile section */
+.profile_dashboard {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 550px;
+}
+
+.profile_dashboard img {
+  display: block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 33%;
+  margin-bottom: 5%;
+}
+
+.profile_dashboard h3 {
+  margin: 50px 0;
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.profile_dashboard p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.profile_dashboard:hover {
+  transform: scale(1.1);
+}
+
+.profile_dashboard .btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #808080;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #808080;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile_dashboard .btn:hover {
+  background-color: #40bdb5;
+}
+
+.delete-btn:hover {
+  background-color: #db3333;
+}
+
+.profile_dashboard a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 600px) {
+  .profile_dashboard {
+    width: 90%;
+  }
+  .profile_dashboard img {
+    margin: 0 30%;
+    height: 130px;
+    width: 130px;
+  }
+  .profile_dashboard h3 {
+    font-size: 35px;
+  }
+
+  .profile_dashboard .btn {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .profile_dashboard {
+    height: 650px;
+  }
+
+  .profile_dashboard img {
+    margin-left: 30%;
+    height: 100px;
+    width: 100px;
+  }
+  .profile_dashboard h3 {
+    font-size: 30px;
+  }
+
+  .delete-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .profile_dashboard .btn {
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> UPDATE PROFILE <<<-----------*/
+/* -----------------------------------*/
+.update-profile {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.update-profile img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin:0 40%;
+}
+
+
+.update-profile .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.update-profile .inputBox {
+  flex: 1 1 100%;
+  margin: 0 10px;
+}
+
+.update-profile span {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.update-profile input[type="text"],
+.update-profile input[type="email"],
+.update-profile input[type="password"],
+.update-profile input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-profile .btn {
+  font: 0.9em sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #808080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.update-profile .delete-btn {
+  font: 0.9em sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.update-profile .message {
+  margin-bottom: 10px;
+  color: #f44336;
+}
+
+.update-profile:hover,
+.update-profile .box:hover {
+  transform: scale(1.03);
+}
+
+.update-profile .btn:hover {
+  background-color: #40bdb5;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .update-profile .flex {
+    flex-direction: column;
+  }
+
+  .update-profile .inputBox {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .update-profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 30%;
+  }
+
+  .update-profile .delete-btn {
+    font: 0.7em sans-serif;
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+  }
+}
+
+
+.register-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.register-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block; 
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+}
+
+.box:focus {
+  outline: none;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+  .register-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> LOGIN <<<-----------*/
+/* -----------------------------------*/
+
+.login-container{
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.login-container.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.login-container.success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.login-container.form-group {
+  margin-bottom: 20px;
+}
+
+.login-containerlabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container.box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+}
+
+.login-container.box:focus {
+  outline: none;
+}
+
+.login-container.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container.btn:hover {
+  background-color: #45a049;
+}
+.login-container .loginbox-container p{
+  margin-top: 10px;
+}
+.login-container .loginbox-container p .register{
+  color: rgb(103, 201, 110);
+}
+.login-container .loginbox-container p .register:hover{
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .login-container{
+      max-width: 100%;
+      padding: 10px;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> DASHBOARD <<<-----------*/
+/* -----------------------------------*/
+/* Set up the main container */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+}
+
+/* Style the profile section */
+.profile {
+  padding:20px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.profile img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.profile h3 {
+  margin: 25px auto;
+  padding: 25px 0;
+  font-size: 40px;
+}
+
+.profile .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile .btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.profile p {
+  font-size: 14px;
+}
+
+.profile p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile p a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------------*/
+/* ---------->>> UPDATE PROFILE <<<-----------*/
+/* -----------------------------------*/
+.update-profile {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.update-profile img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin:0 0 20px 225px;
+}
+
+.update-profile .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.update-profile .inputBox {
+  flex: 1 1 100%;
+  margin: 0 10px;
+}
+
+.update-profile span {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.update-profile input[type="text"],
+.update-profile input[type="email"],
+.update-profile input[type="password"],
+.update-profile input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-profile .delete-btn
+{
+  margin: 10px auto;
+}
+.update-profile .success_message {
+  margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 3px solid #008000;
+    background-color: green;
+    border-radius: 5px;
+    padding: 0 6px;
+}
+.update-profile .error_message {
+  margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 3px solid #f10000;
+    background-color: #f10000;
+    border-radius: 5px;
+    padding: 0 6px;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 600px) {
+  .update-profile .flex {
+    flex-direction: column;
+  }
+
+  .update-profile .inputBox {
+    margin: 0;
+  }
+}
+
+
+.login-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; 
+}
+
+.login-container h2 {
+  margin-top: 0;
+  font-size: 2em; 
+  color: #40bdb5; 
+}
+
+.login-container .error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.login-container .success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container .box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em; 
+}
+
+.login-container .box:focus {
+  outline: none;
+  box-shadow: 0 0 10px #40bdb5; 
+}
+
+.login-container .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #808080;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em; 
+}
+
+.login-container .btn:hover {
+  background-color: #40bdb5; 
+}
+
+.login-container .box:hover,
+.login-container:hover {
+  transform: scale(1.03);
+}
+
+.login-container p{
+  text-align: center;
+  margin-top: 10px;
+}
+
+#link_to_register:hover {
+  text-decoration: underline;
+  color: #40bdb5; 
+}
+
+/* Responsive Styles for login page */
+@media only screen and (max-width: 600px) {
+  .login-container{
+      max-width: 100%;
+      padding: 10px;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> DASHBOARD <<<-----------*/
+/* -----------------------------------*/
+/* Set up the main container */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Style the profile section */
+.profile_dashboard {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 600px;
+}
+
+.profile_dashboard img {
+  display: block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 33%;
+  margin-bottom: 5%;
+}
+
+.profile_dashboard h3 {
+  margin: 50px 0;
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.profile_dashboard p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.profile_dashboard:hover {
+  transform: scale(1.1);
+}
+
+.profile_dashboard .btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #808080;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #808080;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile_dashboard .btn:hover {
+  background-color: #40bdb5;
+}
+
+.delete-btn:hover {
+  background-color: #db3333;
+}
+
+.profile_dashboard a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 600px) {
+  .profile_dashboard {
+    width: 90%;
+  }
+  .profile_dashboard img {
+    margin: 0 30%;
+    height: 130px;
+    width: 130px;
+  }
+  .profile_dashboard h3 {
+    font-size: 35px;
+  }
+
+  .profile_dashboard .btn {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .profile_dashboard {
+    height: 650px;
+  }
+
+  .profile_dashboard img {
+    margin-left: 30%;
+    height: 100px;
+    width: 100px;
+  }
+  .profile_dashboard h3 {
+    font-size: 30px;
+  }
+
+  .delete-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .profile_dashboard .btn {
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> UPDATE PROFILE <<<-----------*/
+/* -----------------------------------*/
+.update-profile {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.update-profile img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin:0 40%;
+}
+
+
+.update-profile .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.update-profile .inputBox {
+  flex: 1 1 100%;
+  margin: 0 10px;
+}
+
+.update-profile span {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.update-profile input[type="text"],
+.update-profile input[type="email"],
+.update-profile input[type="password"],
+.update-profile input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-profile .btn {
+  font: 0.9em sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #808080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.update-profile .delete-btn {
+  font: 0.9em sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.update-profile .message {
+  margin-bottom: 10px;
+  color: #f44336;
+}
+
+.update-profile:hover,
+.update-profile .box:hover {
+  transform: scale(1.03);
+}
+
+.update-profile .btn:hover {
+  background-color: #40bdb5;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .update-profile .flex {
+    flex-direction: column;
+  }
+
+  .update-profile .inputBox {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .update-profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 30%;
+  }
+
+  .update-profile .delete-btn {
+    font: 0.7em sans-serif;
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+  }
+}
+
+
+.register-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.register-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block; 
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+}
+
+.box:focus {
+  outline: none;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+  .register-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> LOGIN <<<-----------*/
+/* -----------------------------------*/
+
+.login-container{
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.login-container.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.login-container.success-message {
+  color: #008000;
+  margin-bottom: 10px;
+}
+
+.login-container.form-group {
+  margin-bottom: 20px;
+}
+
+.login-containerlabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container.box {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 4px;
+}
+
+.login-container.box:focus {
+  outline: none;
+}
+
+.login-container.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container.btn:hover {
+  background-color: #45a049;
+}
+.login-container .loginbox-container p{
+  margin-top: 10px;
+}
+.login-container .loginbox-container p .register{
+  color: rgb(103, 201, 110);
+}
+.login-container .loginbox-container p .register:hover{
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .login-container{
+      max-width: 100%;
+      padding: 10px;
+  }
+}
+
+/* -----------------------------------*/
+/* ---------->>> DASHBOARD <<<-----------*/
+/* -----------------------------------*/
+/* Set up the main container */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+}
+
+/* Style the profile section */
+.profile {
+  padding:20px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.profile img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.profile h3 {
+  margin: 25px auto;
+  padding: 25px 0;
+  font-size: 40px;
+}
+
+.profile .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile .btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.profile p {
+  font-size: 14px;
+}
+
+.profile p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile p a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------------*/
+/* ---------->>> UPDATE PROFILE <<<-----------*/
+/* -----------------------------------*/
+.update-profile {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.update-profile img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin:0 0 20px 225px;
+}
+
+.update-profile .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.update-profile .inputBox {
+  flex: 1 1 100%;
+  margin: 0 10px;
+}
+
+.update-profile span {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.update-profile input[type="text"],
+.update-profile input[type="email"],
+.update-profile input[type="password"],
+.update-profile input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-profile .delete-btn
+{
+  margin: 10px auto;
+}
+.update-profile .success_message {
+  margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 3px solid #008000;
+    background-color: green;
+    border-radius: 5px;
+    padding: 0 6px;
+}
+.update-profile .error_message {
+  margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 3px solid #f10000;
+    background-color: #f10000;
+    border-radius: 5px;
+    padding: 0 6px;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 600px) {
+  .update-profile .flex {
+    flex-direction: column;
+  }
+
+  .update-profile .inputBox {
+    margin: 0;
+  }
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> ADD JOB <<<-----------*/
+/* -----------------------------------*/
+/* Add Job Title Styles */
+.add-job-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.add-job-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+/* Label Styles */
+.add-job-form label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Input Styles */
+.add-job-form input[type="text"],
+.add-job-form input[type="number"],
+.add-job-form textarea {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit Button Styles */
+.add-job-form input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  background-color: gray;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-job-form input[type="submit"]:hover {
+  background-color: #40bdb5;
+}
+
+/* Success and Error Messages */
+.ok {
+  color: green;
+}
+
+.notok {
+  color: red;
+}
+
+.wrong {
+  color: red;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .add-job-container {
+    padding: 10px;
+  }
+
+  .add-job-form input[type="text"],
+  .add-job-form input[type="number"],
+  .add-job-form textarea {
+    width: 100%;
+  }
+  
+}
+/* ----------------------------------------------------------------------------- */
+/* -----------------------------------*/
+/* ---------->>> RESPONSIVE <<<-----------*/
+/* -----------------------------------*/
+
+@media screen and (max-width:1200px) {
+  .inner-container {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+
+  .inner-container {
+    width: 100%;
+  }
+}
+
+/*Laptop view*/
+@media screen and (max-width: 875px) {
+  #first-enhancement-pic {
+    width: 95%;
+  }
+
+  #second-enhancement-pic {
+    width: 95%;
+  }
+
+  #third-enhancement-pic {
+    width: 95%;
+  }
+
+  #fourth-enhancement-pic {
+    width: 95%;
+  }
+
+  #fifth-enhancement-pic {
+    width: 95%;
+  }
+
+  .jobs-list-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /*Navigation*/
+  label {
+    display: block;
+  }
+
+  #nav_bar {
+    /* The nav bar i
+    /* conflict error with ul in navigation bar */
+    /* => change the id of ul in nav_bar*/
+    font-size: 1.2em;
+    position: absolute;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    gap: 2em;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    transition: 0.5s;
+    z-index: 1;
+    /* Set z-index to 1 */
+  }
+
+  input[type="checkbox"]:checked~#nav_bar {
+    left: 0;
+  }
+
+  /*Banner*/
+  .statitics h1 {
+    font-size: 43px;
+  }
+
+  /*footer*/
+  footer {
+    bottom: unset;
+    z-index: 0;
+  }
+
+  .col {
+    flex-basis: 100%;
+  }
+
+  .col:nth-child(2),
+  .col:nth-child(3) {
+    flex-basis: 100%;
+  }
+
+  .teams {
+    max-width: 100%;
+  }
+
+  .job-applying-container {
+    max-width: 500px;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+
+}
+
+footer {
+  left: 0px;
+}
+
+@media screen and (max-width: 684px) {
+
+  .banner {
+    height: 1100px !important;
+  }
+
+
+  .statitics ul {
+    display: block;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    /* padding: 60px; */
+
+  }
+
+
+  #countdown1,
+  #countdown2,
+  #countdown3,
+  #countdown4 {
+    font-size: 3em;
+  }
+
+  /* why choose us */
+  .section-head h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #applyh1 {
+    margin-bottom: 500px;
+  }
+
+  .inner-container .course-info h1 {
+    font-size: 190%;
+  }
+
+  .inner-container .course-info dl {
+    font-size: 60%;
+  }
+
+  .inner-container .course-info .profile img {
+    height: 150px;
+    width: 200px;
+  }
+
+table {
+    font-size: 70%;
+  }
+
+  .enhancements h2 {
+    font-size: 210%;
+  }
+
+  .job-applying-container .applying-basic-info h2 {
+    font-size: 150%;
+  }
+
+  .skill_list .container {
+    font-size: 120%;
+  }
+
+  .skill_list .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+
+  /*Reduce IMG size (Don't know how)*/
+  .jobs-list-container h2 {
+    font-size: 200%;
+  }
+
+  .jobs-list-container .jobs-container .job img {
+    left: 15px;
+  }
+
+  .jobs-list-container .jobs-container .job-title {
+    font-size: 120%;
+    left: 15px;
+  }
+
+  .jobs-list-container .jobs-container .job .open-postion {
+    font-size: 100%;
+    right: 20px;
+  }
+
+  .jobs-list-container .jobs-container .details h4 {
+    font-size: 100%;
+  }
+
+  .jobs-list-container .details ul {
+    font-size: 12px;
+    left: 10px;
+  }
+
+  .jobs-list-container .details ol {
+    font-size: 12px;
+    left: 10px;
+  }
+
+  .jobs-list-container .jobs-container .job .Apply-btn {
+    margin-left: 8px;
+  }
+
+  .name-container {
+    display: block;
+  }
+
+  .name-container div {
+    margin-right: 0px;
+  }
+
+  .name-container #last_name1 {
+    position: relative;
+    margin-left: 0px;
+  }
+
+  .name-container input {
+    display: block;
+    width: 100%;
+  }
+
+  #applyh1 {
+    font-size: 290%;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #applyh1 {
+    font-size: 210%;
+  }
+
+  input[type="file"] {
+    font-size: 70%;
+  }
+
+  .about-section {
+    padding: 0;
+  }
+
+  .inner-container {
+    padding: 60px;
+  }
+
+  .enhancements-list {
+    left: 9px;
+  }
+  table {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #applyh1 {
+    font-size: 180%;
+  }
+
+  .inner-container .course-info h1 {
+    font-size: 180%;
+  }
+
+  .inner-container .course-info dl {
+    font-size: 50%;
+  }
+
+  .inner-container .course-info .profile img {
+    height: 100px;
+    width: 150px;
+  }
+  table {
+    font-size: 70%;
+  }
+  table,th,td
+  {
+    border: 1px solid #da9452;
+  }
+  td,th{
+    
+    padding:0;
+  }
+
+
+  .enhancements h2 {
+    font-size: 150%;
+  }
+
+  .job-applying-container .applying-basic-info .skill_list h2 {
+    font-size: 130%;
+  }
+
+  .skill_list .container {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .inner-container .course-info h2 {
+    font-size: 100%;
+  }
+
+table {
+    position: relative;
+    right: 20px;
+  }
+
+  .job-applying-container .applying-basic-info fieldset {
+    width: 100%;
+  }
+
+  .jobs-list-container h2 {
+    font-size: 200%;
+  }
+
+  .jobs-list-container .jobs-container .job-title {
+    font-size: 120%;
+    left: 0px;
+  }
+
+  .jobs-list-container .jobs-container .job .open-postion {
+    font-size: 100%;
+    right: 20px;
+  }
+
+  .jobs-list-container .jobs-container .details h4 {
+    font-size: 90%;
+  }
+
+  .jobs-list-container .details ul {
+    left: 10px;
+    font-size: 10px;
+  }
+
+  .jobs-list-container .details ol {
+    left: 10px;
+    font-size: 10px;
+  }
+
+  .jobs-list-container .jobs-container .job img {
+    left: 0px;
+  }
+
+  .jobs-list-container .jobs-container .job .Apply-btn {
+    margin-left: 7px;
+  }
+}
+
