@@ -113,7 +113,8 @@
                     unset($_SESSION['open_positions']);
 
                     // Redirect to the same page to clear POST data
-                    header("Location: add_jobs.php" . $_SERVER['PHP_SELF']);
+                    // header("Location: add_jobs.php");
+                    // REMOVE header to prevent errors.
                 } else {
                     echo "Error: " . mysqli_error($conn);
                     header("Location: add_jobs.php" . $_SERVER['PHP_SELF']);
