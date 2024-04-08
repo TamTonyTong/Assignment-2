@@ -96,14 +96,8 @@
         $image_size = $_FILES['image']['size'];
         $image_tmp_name = $_FILES['image']['tmp_name'];
         $image_folder = 'uploaded_img/' . $image;
-        // $select = "SELECT * FROM `user_form` WHERE email = '?' AND password = '?') or die('query failed')";
-        // $stmt = mysqli_prepare($conn, $select);
-        // mysqli_stmt_bind_param($stmt, "ss", $email, $pass);
-        // mysqli_stmt_execute($stmt);
 
         $errors = [];
-
-        
 
         if (empty($name)) {
             $errors["name"] = "User name is required";
@@ -117,10 +111,11 @@
             $errors["email"] = "Invalid email format";
         } else {
             // Check if email already exists in user_form table
-            $query = "SELECT * FROM user_form WHERE email='?'";
+            $query = "SELECT * FROM user_form WHERE email=?";
             $stmt = mysqli_prepare($conn, $query);
             mysqli_stmt_bind_param($stmt,"s",$email);
             mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
             if ($result) {
                 if (mysqli_num_rows($result) > 0) {
                     $errors["email"] = "Email already exists";
@@ -151,12 +146,10 @@
             // Hashed password   
             $hashedPass = password_hash($pass, PASSWORD_BCRYPT);
             $user = "user";
-            $insert = mysqli_query($conn, "INSERT INTO `user_form`(name, email, password, image, privileges) VALUES('?', '?', '?', '?', '?')") or die('query failed');
+            $insert = "INSERT INTO `user_form`(name, email, password, image, privileges) VALUES(?, ?, ?, ?, ?)";
             $stmt = mysqli_prepare($conn, $insert);
             mysqli_stmt_bind_param($stmt,"sssss",$name, $email, $hashedPass, $image, $user);
-            mysqli_stmt_execute($stmt);
-            $insert = mysqli_stmt_get_result($stmt);
-            if ($insert) {
+            if (mysqli_stmt_execute($stmt)) {
                 move_uploaded_file($image_tmp_name, $image_folder);
                 $message[] = 'Registered successfully!';
                 header('location:login.php');
