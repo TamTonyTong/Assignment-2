@@ -24,7 +24,7 @@
               <li><a href="enhancements.php">Enhancements</a></li>
               <li><a href="jobs.php">Job Descriptions</a></li>
               <li><a href="application_searching.php">Search Application</a></li>
-              <li><a href="https://youtu.be/9ScsvjHyDCk">Group Video</a></li>
+              <li><a href="https://youtu.be/GrEiv9SRdNg">Group Video</a></li>
             </ul>
         </div>
 
