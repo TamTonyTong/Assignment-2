@@ -101,8 +101,23 @@
                 // Execute SQL statement
                 if (mysqli_stmt_execute($stmt)) {
                     echo "<p class = 'successful'>Job added successfully.</p>";
+
+                    // Clear form data stored in session
+                    unset($_SESSION['title']);
+                    unset($_SESSION['reference']);
+                    unset($_SESSION['description']);
+                    unset($_SESSION['salary']);
+                    unset($_SESSION['reporting_to']);
+                    unset($_SESSION['responsibilities']);
+                    unset($_SESSION['qualifications']);
+                    unset($_SESSION['open_positions']);
+
+                    // Redirect to the same page to clear POST data
+                    header("Location: add_jobs.php" . $_SERVER['PHP_SELF']);
                 } else {
                     echo "Error: " . mysqli_error($conn);
+                    header("Location: add_jobs.php" . $_SERVER['PHP_SELF']);
+                    exit;
                 }
 
                 // Close statement and connection
