@@ -6,9 +6,7 @@
     session_start();
     $privileges = $_SESSION['privileges'];
     $user_id = $_SESSION['userId'];
-    // echo $privileges;
     // Check if user is already logged in
-    // REMEMBER TO IMPLEMENT ANOTHER FUNC TO CHECK THE PRIVILEGE
     if ($privileges !== "admin") {
         header('location: dashboard.php');
     } elseif (!isset($user_id)) {
